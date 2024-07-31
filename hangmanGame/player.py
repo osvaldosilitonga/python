@@ -27,7 +27,7 @@ class Player:
             self.chance -= 1
 
     def is_win(self):
-        return True if self.__words == ''.join(self.result) else False
+        return True if '-' not in self.result else False
 
     def get_info(self):
         result = ' '.join(self.result)
