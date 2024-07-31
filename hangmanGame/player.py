@@ -1,13 +1,70 @@
 import random
 
+stages = ['''
+   +---+
+   |   |
+   O   |
+  /|\\  |
+  / \\  |
+       |
+==========
+''', '''
+   +---+
+   |   |
+   O   |
+  /|\\  |
+  /    |
+       |
+==========
+''', '''
+   +---+
+   |   |
+   O   |
+  /|\\  |
+       |
+       |
+==========
+''', '''
+   +---+
+   |   |
+   O   |
+  /|   |
+       |
+       |
+==========
+''', '''
+   +---+
+   |   |
+   O   |
+  /    |
+       |
+       |
+==========
+''', '''
+   +---+
+   |   |
+   O   |
+       |
+       |
+       |
+==========
+''', '''
+   +---+
+   |   |
+       |
+       |
+       |
+       |
+==========
+''']
 
 class Player:
     __w = ("mouse", "keyboard", "monitor", "tumbler", "motorcycle", "airplane", "computer", "cardboard")
     __words = ""
     result = []
+    chance = 6
 
-    def __init__(self, chance):
-        self.chance = chance
+    def __init__(self):
         self.__generate_random_words()
 
     def __generate_random_words(self):
@@ -35,3 +92,4 @@ class Player:
         print("*** Status ***")
         print(f"Chance: {self.chance}")
         print(f"Result: {result}")
+        print(stages[self.chance])
