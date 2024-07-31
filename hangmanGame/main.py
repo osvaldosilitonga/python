@@ -12,7 +12,7 @@ while True:
     print(message)
     message = ""
 
-    user_input = input("Please insert a one character (type \\exit to exit) : ")
+    user_input = input("Please insert a one character (type \\exit to exit) : ").lower()
     if user_input == "\\exit":
         print("Well Played, Goodbye...")
         exit(0)
@@ -21,7 +21,7 @@ while True:
         message = "Invalid Input...\n"
         continue
 
-    player.check_character(user_input.lower())
+    player.check_character(user_input)
 
     if player.chance == 0:
         player.get_info()
