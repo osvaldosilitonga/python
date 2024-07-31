@@ -58,6 +58,7 @@ stages = ['''
 ==========
 ''']
 
+
 class Player:
     __w = ("mouse", "keyboard", "monitor", "tumbler", "motorcycle", "airplane", "computer", "cardboard")
     __words = ""
